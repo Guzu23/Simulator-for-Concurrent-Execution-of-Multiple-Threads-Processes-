@@ -1,0 +1,54 @@
+//nu schimbati aceasta sintaxa! 
+//atentie la processes_count si phases_count
+
+
+[Legend]
+// q1 = CPU limit for MAX_PRIORITY
+// q2 = CPU limit for NORMAL_PRIORITY
+// q3 = CPU limit for MIN_PRIORITY
+//  k = PENALTY limit
+//  r = AWARD limit
+
+
+SIM_CONDITIONS: q1=2 q2=5 q3=10 k=5 r=5  
+
+
+[PROCESSES]
+processes_count=5         //pentru o indexare cu A..Z, processes_count <= 26 
+
+Process #1
+name=my proc
+start_time=0  
+phases_count=2  
+Phase#1 CPU=5 I/O=7 REPEAT=10  
+Phase#2 CPU=3 I/O=4 REPEAT=2  
+
+Process #2
+name=proc 2  
+start_time=5  
+phases_count=3  
+Phase#1 CPU=5 I/O=7 REPEAT=10  
+Phase#2 CPU=3 I/O=4 REPEAT=2  
+Phase#3 CPU=13 I/O=7 REPEAT=8  
+
+Process #3
+name=ZZZ
+start_time=10  
+phases_count=4  
+Phase#1 CPU=5 I/O=7 REPEAT=10  
+Phase#2 CPU=3 I/O=4 REPEAT=2  
+Phase#3 CPU=10 I/O=14 REPEAT=25  
+Phase#4 CPU=8 I/O=5 REPEAT=8  
+
+Process #4
+name=proc 3
+start_time=0  
+phases_count=2  
+Phase#1 CPU=15 I/O=17 REPEAT=10  
+Phase#2 CPU=7 I/O=4 REPEAT=20  
+
+Process #5
+name=program  
+start_time=0  
+phases_count=1  
+Phase#1 CPU=12 I/O=1 REPEAT=3   

@@ -1,0 +1,1 @@
+java TS 2>> start.log

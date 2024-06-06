@@ -1,0 +1,1 @@
+javac TS.java 2>> compile.log
